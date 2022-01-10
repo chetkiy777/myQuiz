@@ -139,19 +139,29 @@ var score = 0;
 var complitedQuestionsId = [];
 var questions = [{
   id: 1,
-  question: "Сколько домашних у твоей поруги",
+  question: "Сколько домашних у твоей ЛП?",
   answers: ["2", "3", "4"],
   correctAnswer: 2
 }, {
   id: 2,
-  question: "Как зовут родителей твоей ЛП",
+  question: "Как зовут родителей твоей ЛП?",
   answers: ["Игорь и Анна", "Федя и Гриша", "Андрей и Оксана"],
   correctAnswer: 0
 }, {
   id: 3,
-  question: "Какая марка машины у папы твоей ЛП",
+  question: "Какая марка машины у папы твоей ЛП?",
   answers: ["Жигули", "Рено", "Фольцваген"],
   correctAnswer: 1
+}, {
+  id: 4,
+  question: "Каким видом спорта занимается твоя ЛП?",
+  answers: ["Рисование", "Танци", "Кикбоксинг"],
+  correctAnswer: 2
+}, {
+  id: 5,
+  question: "Какая любимая игра твоей ЛП?",
+  answers: ["Roblox", "Peppi House", "Brawl Stars"],
+  correctAnswer: 0
 }];
 
 var renderQuestion = function renderQuestion() {
