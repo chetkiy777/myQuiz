@@ -20,6 +20,50 @@
   margin: 0 auto;
 }
 
+.startPage {
+  position: absolute;
+
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #000;
+}
+
+.startPage__title {
+  font-size: 22px;
+  font-weight: 800;
+  color: pink;
+  text-align: center;
+}
+
+.startPage__btn {
+  background-color: tomato;
+  height: 70px;
+  width: 120px;
+
+  border: 2px solid silver;
+  border-radius: 50%;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.img-thumb {
+  width: 270px;
+
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.startPage.hidden {
+  display: none;
+}
+
 .modal-block {
   position: absolute;
   display: flex;

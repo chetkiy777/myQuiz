@@ -129,7 +129,9 @@ var circle1 = document.querySelector('#circle-1'),
     circle3 = document.querySelector('#circle-3');
 var allCircles = document.querySelectorAll('.circle__item');
 var indexOfCircle = 0;
+var startPage = document.querySelector('[data-startPage]');
 var modal = document.querySelector('[data-modal]');
+var startBtn = document.querySelector('[data-start]');
 var nextBtn = document.querySelector('[data-nextBtn]');
 var restartBtn = document.querySelector('[data-restart]');
 var indexOfQuestion = 0;
@@ -159,6 +161,10 @@ var renderQuestion = function renderQuestion() {
   variant2.innerHTML = questions[indexOfQuestion].answers[1];
   variant3.innerHTML = questions[indexOfQuestion].answers[2];
   complitedQuestionsId.push(questions[indexOfQuestion].id);
+};
+
+var quizStart = function quizStart() {
+  startPage.classList.add('hidden');
 };
 
 var quizEnd = function quizEnd() {
@@ -198,6 +204,9 @@ var quizRestart = function quizRestart() {
 
 window.addEventListener('load', function () {
   renderQuestion();
+});
+startBtn.addEventListener('click', function () {
+  quizStart();
 });
 nextBtn.addEventListener('click', function () {
   indexOfQuestion += 1;

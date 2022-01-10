@@ -16,10 +16,13 @@ const allCircles = document.querySelectorAll('.circle__item')
 
 let indexOfCircle = 0
 
+const startPage = document.querySelector('[data-startPage]')
 const modal = document.querySelector('[data-modal]')
-      
+
+const startBtn = document.querySelector('[data-start]')
 const nextBtn = document.querySelector('[data-nextBtn]')
 const restartBtn = document.querySelector('[data-restart]')
+
 
 let indexOfQuestion = 0
 
@@ -73,6 +76,10 @@ const renderQuestion = () => {
     
 }
 
+const quizStart = () => {
+    startPage.classList.add('hidden')
+}
+
 const quizEnd = () => {
     modal.classList.remove('hidden')
     score === 0
@@ -109,6 +116,10 @@ const quizRestart = () => {
 
 window.addEventListener('load', () => {
     renderQuestion()
+})
+
+startBtn.addEventListener('click', () => {
+    quizStart()
 })
 
 nextBtn.addEventListener('click', () => {
