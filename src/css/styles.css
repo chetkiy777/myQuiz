@@ -1,0 +1,169 @@
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  height: 520px;
+  width: 700px;
+  border-radius: 10px;
+
+  background-color: rgba(245, 141, 166, 1);
+  overflow: hidden;
+
+  margin: 0 auto;
+}
+
+.modal-block {
+  position: absolute;
+  display: flex;
+  width: 700px;
+  height: 520px;
+  border-radius: 10px;
+
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.73);
+}
+
+.modal {
+  text-align: center;
+
+  padding: 45px 12px;
+
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.modal__text {
+  font-family: "Roboto";
+  font-size: 26px;
+  line-height: 30px;
+
+  font-weight: 700;
+}
+
+.modal-block.hidden {
+  display: none;
+}
+
+.restart-btn {
+  background-color: pink;
+  color: #000;
+  margin-top: 10px;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+.questions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 190px;
+
+  background: linear-gradient(
+    180deg,
+    #69c0db 21.84%,
+    rgba(105, 192, 219, 0) 100%
+  );
+}
+
+.question__text {
+  font-weight: 700;
+}
+
+.variants {
+  padding-bottom: 20px;
+}
+
+.variants__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 34px;
+  padding-bottom: 34px;
+
+  height: 230px;
+  width: 100%;
+}
+
+.variant__item {
+  display: block;
+  width: 100%;
+}
+
+.variant__btn {
+  display: inline-block;
+  height: 30px;
+  width: 100%;
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-style: italic;
+  font-weight: 600;
+
+  background-color: rgba(109, 214, 188, 1);
+}
+
+.next-btn {
+  display: block;
+  color: #000;
+  font-weight: 700;
+  background-color: rgba(109, 214, 188, 1);
+  margin-left: 45%;
+  border-radius: 10px;
+}
+
+.variant__btn.correct {
+  background-color: green;
+}
+
+.variant__btn.wrong {
+  background-color: red;
+}
+
+.circle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: 100%;
+
+  background-color: skyblue;
+}
+
+.circle__item.correct {
+  background-color: green;
+}
+
+.circle__item.wrong {
+  background-color: red;
+}
+
+.circle__item {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+
+  margin-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.circle__item .wrong {
+  background-color: red;
+}
+
+.circle__item .right {
+  background-color: green;
+}

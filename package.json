@@ -1,0 +1,16 @@
+{
+  "name": "bestFriendTest",
+  "version": "1.0.0",
+  "description": "test for best friends",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html"
+  },
+  "keywords": [],
+  "author": "Igor Gladkiy <egunka1988@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
