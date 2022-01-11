@@ -13,7 +13,7 @@ const allVariants = document.querySelectorAll('.variant__btn')
 
 const circle1 = document.querySelector('#circle-1'),
       circle2 = document.querySelector('#circle-2'),
-    circle3 = document.querySelector('#circle-3')
+      circle3 = document.querySelector('#circle-3')
 
 const allCircles = document.querySelectorAll('.circle__item')    
 
@@ -26,14 +26,9 @@ const startBtn = document.querySelector('[data-start]')
 const nextBtn = document.querySelector('[data-nextBtn]')
 const restartBtn = document.querySelector('[data-restart]')
 
-
 let indexOfQuestion = 0
 
-
-
 let score = 0
-
-const complitedQuestionsId = []
 
 const questions = [
     {
@@ -88,7 +83,6 @@ const questions = [
     },
 ]
 
-
 allQuestionsOutput.textContent = questions.length
 
 const renderQuestion = () => {
@@ -112,7 +106,9 @@ const quizEnd = () => {
     modal.classList.remove('hidden')
 
     switch (score) {
-        case 1 || 2:
+        case 1:
+            return scoreOutput.textContent = `Издеваешся?! 1 ответ? А ну быстро проходи заново!`
+        case 2:
             return scoreOutput.textContent = `до ЛП ещё далеко, всего несколько правильных ответов =(`
         case 3: 
             return scoreOutput.textContent = `Не плохо! Твой результат 3 правильных ответа`

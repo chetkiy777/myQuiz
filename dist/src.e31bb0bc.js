@@ -138,7 +138,6 @@ var nextBtn = document.querySelector('[data-nextBtn]');
 var restartBtn = document.querySelector('[data-restart]');
 var indexOfQuestion = 0;
 var score = 0;
-var complitedQuestionsId = [];
 var questions = [{
   id: 1,
   question: "Сколько домашних у твоей ЛП?",
@@ -184,7 +183,10 @@ var quizEnd = function quizEnd() {
   modal.classList.remove('hidden');
 
   switch (score) {
-    case 1 || 2:
+    case 1:
+      return scoreOutput.textContent = "\u0418\u0437\u0434\u0435\u0432\u0430\u0435\u0448\u0441\u044F?! 1 \u043E\u0442\u0432\u0435\u0442? \u0410 \u043D\u0443 \u0431\u044B\u0441\u0442\u0440\u043E \u043F\u0440\u043E\u0445\u043E\u0434\u0438 \u0437\u0430\u043D\u043E\u0432\u043E!";
+
+    case 2:
       return scoreOutput.textContent = "\u0434\u043E \u041B\u041F \u0435\u0449\u0451 \u0434\u0430\u043B\u0435\u043A\u043E, \u0432\u0441\u0435\u0433\u043E \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u044B\u0445 \u043E\u0442\u0432\u0435\u0442\u043E\u0432 =(";
 
     case 3:
@@ -292,7 +294,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "22607" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "1286" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
