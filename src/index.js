@@ -110,9 +110,19 @@ const quizStart = () => {
 
 const quizEnd = () => {
     modal.classList.remove('hidden')
-    score === 0
-    ? scoreOutput.textContent = `Ничего про меня не знаешь совсем =(`
-    : scoreOutput.textContent = `Твой результат ${score} правильных ответа`    
+
+    switch (score) {
+        case 1 || 2:
+            return scoreOutput.textContent = `до ЛП ещё далеко, всего несколько правильных ответов =(`
+        case 3: 
+            return scoreOutput.textContent = `Не плохо! Твой результат 3 правильных ответа`
+        case 4:
+            return scoreOutput.textContent = 'Хорошо Подруга! Всего 1 не правильный ответ!'
+        case 5:
+            return scoreOutput.textContent = 'Сразу видно кто моя Лучшая Подруга! Все ответы правильные'
+        default:
+            return scoreOutput.textContent = 'Ничего про меня не знаешь совсем =('
+    }
 }
 
 const disableBtns = () => {

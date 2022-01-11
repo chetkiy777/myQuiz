@@ -182,7 +182,23 @@ var quizStart = function quizStart() {
 
 var quizEnd = function quizEnd() {
   modal.classList.remove('hidden');
-  score === 0 ? scoreOutput.textContent = "\u041D\u0438\u0447\u0435\u0433\u043E \u043F\u0440\u043E \u043C\u0435\u043D\u044F \u043D\u0435 \u0437\u043D\u0430\u0435\u0448\u044C \u0441\u043E\u0432\u0441\u0435\u043C =(" : scoreOutput.textContent = "\u0422\u0432\u043E\u0439 \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442 ".concat(score, " \u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u044B\u0445 \u043E\u0442\u0432\u0435\u0442\u0430");
+
+  switch (score) {
+    case 1 || 2:
+      return scoreOutput.textContent = "\u0434\u043E \u041B\u041F \u0435\u0449\u0451 \u0434\u0430\u043B\u0435\u043A\u043E, \u0432\u0441\u0435\u0433\u043E \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u044B\u0445 \u043E\u0442\u0432\u0435\u0442\u043E\u0432 =(";
+
+    case 3:
+      return scoreOutput.textContent = "\u041D\u0435 \u043F\u043B\u043E\u0445\u043E! \u0422\u0432\u043E\u0439 \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442 3 \u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u044B\u0445 \u043E\u0442\u0432\u0435\u0442\u0430";
+
+    case 4:
+      return scoreOutput.textContent = 'Хорошо Подруга! Всего 1 не правильный ответ!';
+
+    case 5:
+      return scoreOutput.textContent = 'Сразу видно кто моя Лучшая Подруга! Все ответы правильные';
+
+    default:
+      return scoreOutput.textContent = 'Ничего про меня не знаешь совсем =(';
+  }
 };
 
 var disableBtns = function disableBtns() {
