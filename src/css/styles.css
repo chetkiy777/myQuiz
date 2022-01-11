@@ -1,8 +1,6 @@
 .container {
   padding-left: 20px;
   padding-right: 20px;
-  /* margin-left: auto;
-  margin-right: auto; */
 }
 
 .wrapper {
@@ -181,15 +179,6 @@
     #777
   );
 }
-
-/* .next-btn {
-  display: block;
-  color: #000;
-  font-weight: 700;
-  background-color: rgba(109, 214, 188, 1);
-  margin-left: 45%;
-  border-radius: 10px;
-} */
 
 .next-btn {
   color: #524e49;
