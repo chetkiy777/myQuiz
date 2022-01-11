@@ -120,6 +120,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"index.js":[function(require,module,exports) {
 var questionOutput = document.querySelector('[data-question]');
 var scoreOutput = document.querySelector('[data-text]');
+var indexOfQuestionOutput = document.querySelector('.index-of-question'),
+    allQuestionsOutput = document.querySelector('.all-questions');
 var variant1 = document.querySelector('.var1'),
     variant2 = document.querySelector('.var2'),
     variant3 = document.querySelector('.var3');
@@ -163,6 +165,7 @@ var questions = [{
   answers: ["Roblox", "Peppi House", "Brawl Stars"],
   correctAnswer: 0
 }];
+allQuestionsOutput.textContent = questions.length;
 
 var renderQuestion = function renderQuestion() {
   nextBtn.disabled = true;
@@ -205,6 +208,7 @@ var quizRestart = function quizRestart() {
   score = 0;
   indexOfQuestion = 0;
   indexOfCircle = 0;
+  indexOfQuestionOutput.textContent = indexOfQuestion + 1;
   allCircles.forEach(function (item) {
     return item.classList.remove('correct', 'wrong');
   });
@@ -220,6 +224,7 @@ startBtn.addEventListener('click', function () {
 });
 nextBtn.addEventListener('click', function () {
   indexOfQuestion += 1;
+  indexOfQuestionOutput.textContent = indexOfQuestion + 1;
   enableBtns();
   indexOfQuestion === questions.length ? quizEnd() : renderQuestion();
 });
@@ -271,7 +276,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33547" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "22607" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

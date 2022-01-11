@@ -2,6 +2,9 @@ const questionOutput = document.querySelector('[data-question]')
 
 const scoreOutput = document.querySelector('[data-text]')
 
+const indexOfQuestionOutput = document.querySelector('.index-of-question'),
+      allQuestionsOutput = document.querySelector('.all-questions')
+
 const variant1 = document.querySelector('.var1'),
       variant2 = document.querySelector('.var2'),
       variant3 = document.querySelector('.var3');
@@ -25,6 +28,8 @@ const restartBtn = document.querySelector('[data-restart]')
 
 
 let indexOfQuestion = 0
+
+
 
 let score = 0
 
@@ -83,6 +88,9 @@ const questions = [
     },
 ]
 
+
+allQuestionsOutput.textContent = questions.length
+
 const renderQuestion = () => {
     nextBtn.disabled = true
     
@@ -128,6 +136,7 @@ const quizRestart = () => {
     score = 0
     indexOfQuestion = 0
     indexOfCircle = 0
+    indexOfQuestionOutput.textContent = indexOfQuestion + 1
 
     allCircles.forEach(item => item.classList.remove('correct', 'wrong'))
     enableBtns()
@@ -145,6 +154,7 @@ startBtn.addEventListener('click', () => {
 nextBtn.addEventListener('click', () => {
 
     indexOfQuestion += 1
+    indexOfQuestionOutput.textContent = indexOfQuestion + 1
     enableBtns()
     indexOfQuestion === questions.length 
         ? quizEnd()
